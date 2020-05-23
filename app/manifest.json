@@ -2,7 +2,7 @@
   "name": "__MSG_appName__",
   "short_name": "__MSG_appShortName__",
   "description": "__MSG_appDescription__",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "manifest_version": 2,
   "default_locale": "en",
   "icons": {
@@ -10,9 +10,7 @@
     "128": "images/icon-128.png"
   },
   "background": {
-    "scripts": [
-      "scripts/background.js"
-    ]
+    "scripts": ["scripts/background.js"]
   },
   "browser_action": {
     "default_icon": {
@@ -31,16 +29,9 @@
   "devtools_page": "pages/devtools.html",
   "content_scripts": [
     {
-      "matches": [
-        "http://*/*",
-        "https://*/*"
-      ],
-      "css": [
-        "styles/contentscript.css"
-      ],
-      "js": [
-        "scripts/contentscript.js"
-      ],
+      "matches": ["http://*/*", "https://*/*"],
+      "css": ["styles/contentscript.css"],
+      "js": ["scripts/contentscript.js"],
       "run_at": "document_end",
       "all_frames": false
     }
