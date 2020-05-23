@@ -15,7 +15,8 @@
     "dev:firefox": "gulp --watch --vendor=firefox",
     "dev:opera": "gulp --watch --vendor=opera",
     "dev:edge": "gulp --watch --vendor=edge",
-    "lint": "standard"
+    "lint": "standard",
+    "dev:z": "gulp build --watch --development --vendor=chrome"
   },
   "standard": {
     "globals": [
