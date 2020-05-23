@@ -34,7 +34,7 @@
     "babili-webpack-plugin": "0.x.x",
     "chromereload": "0.x.x",
     "del": "5.x.x",
-    "gulp": "4.x.x",
+    "gulp": "^4.0.2",
     "gulp-bump": "3.x.x",
     "gulp-cache": "1.x.x",
     "gulp-clean-css": "^4.x.x",
@@ -60,5 +60,8 @@
     "webpack": "4.x.x",
     "webpack-stream": "5.x.x",
     "yargs": "15.x.x"
+  },
+  "dependencies": {
+    "tailwindcss": "^1.4.6"
   }
 }
