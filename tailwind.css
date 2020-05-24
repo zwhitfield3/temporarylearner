@@ -1,3 +1,5 @@
-.test-bg {
-  background-color: blue;
-}
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
