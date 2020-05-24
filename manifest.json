@@ -1,0 +1,11 @@
+{
+  "manifest_version": 2,
+  "name": "Temporary Learner",
+  "version": "0.0.1",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
