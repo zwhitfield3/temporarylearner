@@ -7,5 +7,11 @@
       "matches": ["http://*/*", "https://*/*"],
       "js": ["content.js"]
     }
-  ]
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": "images/demoIcon.png"
+  }
 }
