@@ -290,6 +290,14 @@ module.exports = {
       screen: '100vh',
       chromeExtensionHeight: '500px'
     }),
+    hr: {
+      border: '0',
+      clear: 'both',
+      display: 'block',
+      width: '96%',
+      'background-color': '#FFFF00',
+      height: '1px'
+    },
     inset: {
       '0': '0',
       auto: 'auto'
@@ -676,6 +684,7 @@ module.exports = {
     fontStyle: ['responsive'],
     fontWeight: ['responsive', 'hover', 'focus'],
     height: ['responsive'],
+    hr: ['responsive'],
     inset: ['responsive'],
     justifyContent: ['responsive'],
     letterSpacing: ['responsive'],
