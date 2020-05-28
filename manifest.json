@@ -4,12 +4,21 @@
   "version": "0.0.1",
   "content_scripts": [
     {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["content.js", "popup.js"]
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js",
+        "popup.js"
+      ]
     }
   ],
   "background": {
-    "scripts": ["background.js"]
+    "scripts": [
+      "background.js"
+      // "popup.js"
+    ]
   },
   "browser_action": {
     "default_icon": "images/demoIcon.png",
