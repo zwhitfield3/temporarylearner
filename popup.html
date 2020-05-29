@@ -29,19 +29,19 @@
             />
           </div>
           <div class="flex flex-col pt-3">
-              <div class="block text-gray-700 text-sm font-bold mb-2">
-                Subscription type
-              </div>
-                <div>
-                  <button class="bg-blue-500 hover:bg-blue-700 text-white py-1 px-1 rounded w-chromeExtensionButton text-xs">
-                    Subscribe to this thread
-                  </button>
-                </div>
-                <div class="pt-2">
-                  <button class="bg-blue-500 hover:bg-blue-700 text-white py-1 px-1 rounded w-chromeExtensionButton text-xs">
-                    Subscribe to this thread via user
-                  </button>
-                </div>
+            <div class="block text-gray-700 text-sm font-bold mb-2">
+              Subscription type
+            </div>
+            <div>
+              <input type="checkbox" name="subscriptionType" value="byThread" id="subscriptionType-byThread" checked="checked"/>
+              <label for="subscriptionType-byThread">Subscribe to this thread</label>
+            </div>
+            <div>
+              <input type="checkbox" name="subscriptionType" value="byUser" id="subscriptionType-byUser"/>
+              <label for="subscriptionType-byUser"
+                >Subscribe to this thread via user</label
+              >
+            </div>
           </div>
           <div class="flex flex-col pt-3">
               <div class="block text-gray-700 text-sm font-bold mb-2">
@@ -85,7 +85,7 @@
             />
           </div>
           <div class="pt-2">
-            <button class="bg-blue-500 hover:bg-blue-700 text-white py-1 rounded text-xs py-1 px-2">Subscribe</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white py-1 rounded text-xs py-1 px-2 w-48">Subscribe</button>
           </div>
         </div>
       </div>
