@@ -7,8 +7,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 function changeHandler(event) {
+    // debugger
     if (event.target.id === 'subscriptionCadence-newInfoAvailable') {
-        console.log('WE MADE IT!')
+        console.log('WE MADE IT')
+        event.target.checked = 'checked'
+        console.log('checked status', event.target.checked)
+    } else if (event.target.id === 'subscriptionCadence-onceAWeek') {
+        console.log('WE MADE IT')
+        event.target.checked = 'checked'
+        console.log('checked status', event.target.checked)
     }
 
 
