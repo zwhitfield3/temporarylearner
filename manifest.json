@@ -14,12 +14,6 @@
       ]
     }
   ],
-  "background": {
-    "scripts": [
-      "background.js"
-      // "popup.js"
-    ]
-  },
   "browser_action": {
     "default_icon": "images/demoIcon.png",
     "default_popup": "popup.html",
