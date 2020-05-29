@@ -447,7 +447,8 @@ module.exports = {
       '11/12': '91.666667%',
       full: '100%',
       screen: '100vw',
-      chromeExtensionWidth: '300px'
+      chromeExtensionWidth: '330px',
+      chromeExtensionButton: '15rem'
     }),
     zIndex: {
       auto: 'auto',

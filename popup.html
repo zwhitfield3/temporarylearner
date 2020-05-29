@@ -1,13 +1,13 @@
 <html>
   <head>
-    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" type="text/css" href="output.css" />
     <script src="popup.js"></script>
   </head>
   <body>
     <div class="h-chromeExtensionHeight w-chromeExtensionWidth bg-purple-100">
       <div class="pt-2 pl-2">
         <div class="pb-6">
-          <div class="text-lg block text-gray-700 font-bold">
+          <div class="text-xl block text-gray-700 font-bold">
             Welcome to Temporary Learner
           </div>
         </div>
@@ -29,48 +29,34 @@
             />
           </div>
           <div class="flex flex-col pt-2">
-            <fieldset id="subscriptionType">
               <div class="block text-gray-700 text-sm font-bold mb-2">
                 Subscription type
               </div>
-              <div>
-                <input type="radio" name="subscriptionType" value="byThread" id="subscriptionType-byThread"/>
-                <label for="subscriptionType-byThread">Subscribe to this thread</label>
-              </div>
-              <div>
-                <input type="radio" name="subscriptionType" value="byUser" id="subscriptionType-byUser"/>
-                <label for="subscriptionType-byUser"
-                  >Subscribe to this thread via user</label
-                >
-              </div>
-            </fieldset>
+                <div>
+                  <button class="bg-blue-500 hover:bg-blue-700 text-white py-1 px-1 rounded w-chromeExtensionButton text-xs">
+                    Subscribe to this thread
+                  </button>
+                </div>
+                <div class="pt-2">
+                  <button class="bg-blue-500 hover:bg-blue-700 text-white py-1 px-1 rounded w-chromeExtensionButton text-xs">
+                    Subscribe to this thread via user
+                  </button>
+                </div>
           </div>
           <div class="flex flex-col pt-2">
-            <fieldset id="subscriptionCadence">
               <div class="block text-gray-700 text-sm font-bold mb-2">
                 How often do you want to receive updates?
               </div>
               <div>
-                <input
-                  type="radio"
-                  name="subscriptionCadence"
-                  value="newInfoAvailable"
-                  id="subscriptionCadence-newInfoAvailable"
-                />
-                <label for="subscriptionCadence-newInfoAvailable"
-                   >Whenever new information is available</label
-                >
+                <button class="bg-blue-500 hover:bg-blue-700 text-white py-1 rounded w-chromeExtensionButton text-xs">
+                  Whenever new information is available
+                </button>
               </div>
-              <div>
-                <input
-                  type="radio"
-                  name="subscriptionCadence"
-                  value="onceAWeek"
-                  id="subscriptionCadence-onceAWeek"
-                />
-                <label for="subscriptionCadence-onceAWeek">Once a week</label>
+              <div class="pt-2">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white py-1 px-1 rounded w-chromeExtensionButton text-xs">
+                  Once a week
+                </button>
               </div>
-            </fieldset>
           </div>
         </div>
         <div>
