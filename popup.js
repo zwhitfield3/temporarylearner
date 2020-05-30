@@ -13,7 +13,33 @@ let userData = [];
 
 function saveInfo() {
   const subscriptionData = Object.create();
-  const subscriberEmail = generalElementGrabber("learningsName");
+
+  const subscriberEmail = generalElementGrabber('learningsName');
+  subscriptionData.subscriberEmail = subscriberEmail.value
+
+  const subscriptionByThread = generalElementGrabber('subscriptionType-byThread')
+  subscriptionData.subscriptionByThread = subscriptionByThread.value
+
+  const subscriptionByUser = generalElementGrabber('userSelection')
+  subscriptionData.subscriptionByUser = subscriptionByUser.value
+
+  const subscriptionCadence
+  const newInfoAvailable = generalElementGrabber('newInfoAvailable"')
+  const onceAWeek = generalElementGrabber('onceAWeek')
+
+  if(newInfoAvailable.checked) {
+      subscriptionCadence = newInfoAvailable.value
+  }
+  if(onceAWeek.checked) {
+    subscriptionCadence = onceAWeek.value
+  }
+
+  subscriptionData.subscriptionCadence = subscriptionCadence
+
+  const subscriptionName = generalElementGrabber('learningsName')
+  subscriptionData.subscriptionName = subscriptionName.value
+
+  console.log('subscriptionData', subscriptionData)
 }
 
 function changeHandler(event) {
