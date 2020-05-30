@@ -33,39 +33,65 @@
               Subscription type
             </div>
             <div>
-              <input type="checkbox" name="subscriptionType" value="byThread" id="subscriptionType-byThread" checked="checked"/>
-              <label for="subscriptionType-byThread">Subscribe to this thread</label>
+              <input
+                type="checkbox"
+                name="subscriptionType"
+                value="byThread"
+                id="subscriptionType-byThread"
+                checked="checked"
+              />
+              <label for="subscriptionType-byThread"
+                >Subscribe to this thread</label
+              >
             </div>
             <div>
-              <input type="checkbox" name="subscriptionType" value="byUser" id="subscriptionType-byUser"/>
+              <input
+                type="checkbox"
+                name="subscriptionType"
+                value="byUser"
+                id="subscriptionType-byUser"
+              />
               <label for="subscriptionType-byUser"
                 >Subscribe to this thread via user</label
               >
+              <div>
+                <select
+                  name="userSelection"
+                  id="userSelection"
+                  class="hidden"
+                  multiple
+                >
+                  <option value="enaz321">enaz321</option>
+                  <option value="GreatPhiox">GreatPhiox</option>
+                  <option value="erratsenrab">erratsenrab</option>
+                  <option value="HopeDealer510">HopeDealer510</option>
+                </select>
+              </div>
             </div>
           </div>
           <div class="flex flex-col pt-3">
-              <div class="block text-gray-700 text-sm font-bold mb-2">
-                How often do you want to receive updates?
-              </div>
-                <div>
-                  <input
-                    type="radio"
-                    name="subscriptionCadence"
-                    value="newInfoAvailable"
-                    checked="checked"
-                  />
-                  <label for="subscriptionCadence"
-                    >Whenever new information is available</label
-                  >
-                </div>
-                <div>
-                  <input
-                    type="radio"
-                    name="subscriptionCadence"
-                    value="onceAWeek"
-                  />
-                  <label for="subscriptionCadence">Once a week</label>
-                </div>
+            <div class="block text-gray-700 text-sm font-bold mb-2">
+              How often do you want to receive updates?
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="subscriptionCadence"
+                value="newInfoAvailable"
+                checked="checked"
+              />
+              <label for="subscriptionCadence"
+                >Whenever new information is available</label
+              >
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="subscriptionCadence"
+                value="onceAWeek"
+              />
+              <label for="subscriptionCadence">Once a week</label>
+            </div>
           </div>
         </div>
         <div>
@@ -85,11 +111,14 @@
             />
           </div>
           <div class="pt-2">
-            <button class="bg-blue-500 hover:bg-blue-700 text-white py-1 rounded text-xs py-1 px-2 w-48">Subscribe</button>
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white py-1 rounded text-xs py-1 px-2 w-48"
+            >
+              Subscribe
+            </button>
           </div>
         </div>
       </div>
-
     </div>
   </body>
 </html>
