@@ -5,9 +5,16 @@ document.addEventListener("DOMContentLoaded", function () {
   subscribeViaUserButton.addEventListener("change", changeHandler);
 });
 
-// function generalElementGrabber() {
-//     let generalElement = document
-// }
+function generalElementGrabber(elementID) {
+  return document.getElementById(elementID);
+}
+
+let userData = [];
+
+function saveInfo() {
+  const subscriptionData = Object.create();
+  const subscriberEmail = generalElementGrabber("learningsName");
+}
 
 function changeHandler(event) {
   const listElement = document.getElementById("userSelection");
