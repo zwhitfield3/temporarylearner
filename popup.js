@@ -10,39 +10,35 @@ document.addEventListener("DOMContentLoaded", function () {
 // }
 
 function changeHandler(event) {
-  //   console.log("button has been toggled");
-  //   console.log("event", event);
-  //   debugger;
   const listElement = document.getElementById("userSelection");
   const eventWithTarget = event.target;
   if (eventWithTarget.id === "subscriptionType-byUser") {
-    if (eventWithTarget.checked === true) {
-      //   console.log("WE MADE IT");
-      addOptionElement(eventWithTarget.id);
-      toggleHide(listElement.id);
-    }
+    addOptionElement(eventWithTarget.id);
+    toggleHide(listElement.id, eventWithTarget.id);
   }
 }
 
 function addOptionElement(elementID) {
-  const userOption = document.createElement("option");
-  const listElement = document.getElementById("userSelection");
+  const elementToManipulate = document.getElementById(elementID);
+  if (elementToManipulate.checked === true) {
+    const userOption = document.createElement("option");
+    const listElement = document.getElementById("userSelection");
 
-  userOption.value = "enaz321";
-  userOption.text = "Enaz321";
+    userOption.value = "enaz321";
+    userOption.text = "Enaz321";
 
-  listElement.appendChild(userOption);
+    listElement.appendChild(userOption);
+  }
 }
 
-function toggleHide(elementID) {
+function toggleHide(listElementID, checkboxElementID) {
   //   debugger;
-  const elementToToggle = document.getElementById(elementID);
-  console.log("element.checked", elementToToggle.checked);
-  if (!elementToToggle.checked) {
+  const checkboxElement = document.getElementById(checkboxElementID);
+  const elementToToggle = document.getElementById(listElementID);
+
+  if (checkboxElement.checked) {
     elementToToggle.hidden = false;
-    // console.log("element.hidden", elementToToggle.hidden);
   } else {
-    elementToToggle.hidden = elementToToggle.checked;
-    // console.log("element.hidden", elementToToggle.hidden);
+    elementToToggle.hidden = true;
   }
 }
