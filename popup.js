@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
 // }
 
 function changeHandler(event) {
-  console.log("event", event);
+  //   console.log("button has been toggled");
+  //   console.log("event", event);
   //   debugger;
   const listElement = document.getElementById("userSelection");
   const eventWithTarget = event.target;
@@ -34,10 +35,14 @@ function addOptionElement(elementID) {
 }
 
 function toggleHide(elementID) {
+  //   debugger;
   const elementToToggle = document.getElementById(elementID);
-  if (elementToToggle.hidden === false) {
-    elementToToggle.hidden = true;
-  } else {
+  console.log("element.checked", elementToToggle.checked);
+  if (!elementToToggle.checked) {
     elementToToggle.hidden = false;
+    // console.log("element.hidden", elementToToggle.hidden);
+  } else {
+    elementToToggle.hidden = elementToToggle.checked;
+    // console.log("element.hidden", elementToToggle.hidden);
   }
 }
