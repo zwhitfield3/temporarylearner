@@ -4,14 +4,8 @@
   "version": "0.0.1",
   "content_scripts": [
     {
-      "matches": [
-        "http://*/*",
-        "https://*/*"
-      ],
-      "js": [
-        "content.js",
-        "popup.js"
-      ]
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js", "popup.js"]
     }
   ],
   "browser_action": {
