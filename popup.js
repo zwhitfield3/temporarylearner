@@ -20,14 +20,17 @@ function changeHandler(event) {
 
 function addOptionElement(elementID) {
   const elementToManipulate = document.getElementById(elementID);
-  if (elementToManipulate.checked === true) {
-    const userOption = document.createElement("option");
-    const listElement = document.getElementById("userSelection");
+  const listElement = document.getElementById("userSelection");
+  const userOption = document.createElement("option");
 
+  if (elementToManipulate.checked === true) {
     userOption.value = "enaz321";
     userOption.text = "Enaz321";
+    userOption.id = "1";
 
     listElement.appendChild(userOption);
+  } else {
+    listElement.removeChild(document.getElementById("1"));
   }
 }
 
