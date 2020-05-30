@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
     "subscriptionType-byUser"
   );
   subscribeViaUserButton.addEventListener("change", changeHandler);
+
+  const submitButton = document.getElementById("submit");
+  submitButton.addEventListener("click", saveInfo);
 });
 
 function generalElementGrabber(elementID) {
@@ -12,34 +15,36 @@ function generalElementGrabber(elementID) {
 let userData = [];
 
 function saveInfo() {
-  const subscriptionData = Object.create();
+  let subscriptionData = {};
 
-  const subscriberEmail = generalElementGrabber('learningsName');
-  subscriptionData.subscriberEmail = subscriberEmail.value
+  const subscriberEmail = generalElementGrabber("emailName");
+  subscriptionData.subscriberEmail = subscriberEmail.value;
 
-  const subscriptionByThread = generalElementGrabber('subscriptionType-byThread')
-  subscriptionData.subscriptionByThread = subscriptionByThread.value
+  const subscriptionByThread = generalElementGrabber(
+    "subscriptionType-byThread"
+  );
+  subscriptionData.subscriptionByThread = subscriptionByThread.value;
 
-  const subscriptionByUser = generalElementGrabber('userSelection')
-  subscriptionData.subscriptionByUser = subscriptionByUser.value
+  const subscriptionByUser = generalElementGrabber("userSelection");
+  subscriptionData.subscriptionByUser = subscriptionByUser.value;
 
-  const subscriptionCadence
-  const newInfoAvailable = generalElementGrabber('newInfoAvailable"')
-  const onceAWeek = generalElementGrabber('onceAWeek')
+  let subscriptionCadence = null;
+  const newInfoAvailable = generalElementGrabber("newInfoAvailable");
+  const onceAWeek = generalElementGrabber("onceAWeek");
 
-  if(newInfoAvailable.checked) {
-      subscriptionCadence = newInfoAvailable.value
+  if (newInfoAvailable.checked) {
+    subscriptionCadence = newInfoAvailable.value;
   }
-  if(onceAWeek.checked) {
-    subscriptionCadence = onceAWeek.value
+  if (onceAWeek.checked) {
+    subscriptionCadence = onceAWeek.value;
   }
 
-  subscriptionData.subscriptionCadence = subscriptionCadence
+  subscriptionData.subscriptionCadence = subscriptionCadence;
 
-  const subscriptionName = generalElementGrabber('learningsName')
-  subscriptionData.subscriptionName = subscriptionName.value
+  const subscriptionName = generalElementGrabber("learningsName");
+  subscriptionData.subscriptionName = subscriptionName.value;
 
-  console.log('subscriptionData', subscriptionData)
+  console.log("subscriptionData", subscriptionData);
 }
 
 function changeHandler(event) {
