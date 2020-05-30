@@ -15421,6 +15421,10 @@ video {
   width: 15rem;
 }
 
+.w-chromeExtensionNavbarButton {
+  width: 110px;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -32691,6 +32695,10 @@ video {
 
   .sm\:w-chromeExtensionButton {
     width: 15rem;
+  }
+
+  .sm\:w-chromeExtensionNavbarButton {
+    width: 110px;
   }
 
   .sm\:z-0 {
@@ -49966,6 +49974,10 @@ video {
     width: 15rem;
   }
 
+  .md\:w-chromeExtensionNavbarButton {
+    width: 110px;
+  }
+
   .md\:z-0 {
     z-index: 0;
   }
@@ -67239,6 +67251,10 @@ video {
     width: 15rem;
   }
 
+  .lg\:w-chromeExtensionNavbarButton {
+    width: 110px;
+  }
+
   .lg\:z-0 {
     z-index: 0;
   }
@@ -84510,6 +84526,10 @@ video {
 
   .xl\:w-chromeExtensionButton {
     width: 15rem;
+  }
+
+  .xl\:w-chromeExtensionNavbarButton {
+    width: 110px;
   }
 
   .xl\:z-0 {
