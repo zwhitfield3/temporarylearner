@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+  loadUserData();
+  console.log("appData", appData.userData.subscriptionData);
   const subscribeViaUserButton = document.getElementById(
     "subscriptionType-byUser"
   );
@@ -6,30 +8,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const submitButton = document.getElementById("submit");
   submitButton.addEventListener("click", saveInfo);
-
-  const navbar = document.getElementById("navbar");
-  navbar.addEventListener("click", toggleNavBar);
 });
 
 function generalElementGrabber(elementID) {
   return document.getElementById(elementID);
 }
 
-let userData = [];
+let appData = {
+  //app data
+  generalData: {
+    appName: "",
+    timeUsedPast24Hr: "",
+    timeUsedTotal: "",
+    willAddMoreLata: "",
+  },
+  userData: {
+    subscriptionData: {
+      subscriberEmail: "",
+      subscriptionByThread: "",
+      subscriptionByUser: "",
+      subscriptionCadence: "",
+      subscriptionName: "",
+    },
+    settings: {
+      darkMode: "",
+      allowFeedbackCollection: "false",
+      appColor: "",
+    },
+  },
+};
+
+function loadUserData() {
+  //blah blah blah
+  console.log("user data loaded");
+}
 
 function saveInfo() {
-  let subscriptionData = {};
-
   const subscriberEmail = generalElementGrabber("emailName");
-  subscriptionData.subscriberEmail = subscriberEmail.value;
+  appData.userData.subscriptionData.subscriberEmail = subscriberEmail.value;
 
   const subscriptionByThread = generalElementGrabber(
     "subscriptionType-byThread"
   );
-  subscriptionData.subscriptionByThread = subscriptionByThread.value;
+  appData.userData.subscriptionData.subscriptionByThread =
+    subscriptionByThread.value;
 
   const subscriptionByUser = generalElementGrabber("userSelection");
-  subscriptionData.subscriptionByUser = subscriptionByUser.value;
+  appData.userData.subscriptionData.subscriptionByUser =
+    subscriptionByUser.value;
 
   let subscriptionCadence = null;
   const newInfoAvailable = generalElementGrabber("newInfoAvailable");
@@ -42,10 +68,10 @@ function saveInfo() {
     subscriptionCadence = onceAWeek.value;
   }
 
-  subscriptionData.subscriptionCadence = subscriptionCadence;
+  appData.userData.subscriptionData.subscriptionCadence = subscriptionCadence;
 
   const subscriptionName = generalElementGrabber("learningsName");
-  subscriptionData.subscriptionName = subscriptionName.value;
+  appData.userData.subscriptionData.subscriptionName = subscriptionName.value;
 
   console.log("subscriptionData", subscriptionData);
 }
