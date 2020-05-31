@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
   loadUserData();
-  console.log("appData", appData.userData.subscriptionData);
   const subscribeViaUserButton = document.getElementById(
     "subscriptionType-byUser"
   );
@@ -23,13 +22,15 @@ let appData = {
     willAddMoreLata: "",
   },
   userData: {
-    subscriptionData: {
-      subscriberEmail: "",
-      subscriptionByThread: "",
-      subscriptionByUser: "",
-      subscriptionCadence: "",
-      subscriptionName: "",
-    },
+    subscriptionData: [
+      {
+        subscriberEmail: "",
+        subscriptionByThread: "",
+        subscriptionByUser: "",
+        subscriptionCadence: "",
+        subscriptionName: "",
+      },
+    ],
     settings: {
       darkMode: "",
       allowFeedbackCollection: "false",
@@ -44,18 +45,18 @@ function loadUserData() {
 }
 
 function saveInfo() {
+  let newSubscriptionData = {};
+  console.log("newSubscriptionData", newSubscriptionData);
   const subscriberEmail = generalElementGrabber("emailName");
-  appData.userData.subscriptionData.subscriberEmail = subscriberEmail.value;
+  newSubscriptionData.subscriberEmail = subscriberEmail.value;
 
   const subscriptionByThread = generalElementGrabber(
     "subscriptionType-byThread"
   );
-  appData.userData.subscriptionData.subscriptionByThread =
-    subscriptionByThread.value;
+  newSubscriptionData.subscriptionByThread = subscriptionByThread.value;
 
   const subscriptionByUser = generalElementGrabber("userSelection");
-  appData.userData.subscriptionData.subscriptionByUser =
-    subscriptionByUser.value;
+  newSubscriptionData.subscriptionByUser = subscriptionByUser.value;
 
   let subscriptionCadence = null;
   const newInfoAvailable = generalElementGrabber("newInfoAvailable");
@@ -68,12 +69,13 @@ function saveInfo() {
     subscriptionCadence = onceAWeek.value;
   }
 
-  appData.userData.subscriptionData.subscriptionCadence = subscriptionCadence;
+  newSubscriptionData.subscriptionCadence = subscriptionCadence;
 
   const subscriptionName = generalElementGrabber("learningsName");
-  appData.userData.subscriptionData.subscriptionName = subscriptionName.value;
+  newSubscriptionData.subscriptionName = subscriptionName.value;
 
-  console.log("subscriptionData", subscriptionData);
+  appData.userData.subscriptionData.push(newSubscriptionData);
+  console.log("subscriptionData", appData);
 }
 
 function changeHandler(event) {
