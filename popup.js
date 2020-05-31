@@ -17,22 +17,6 @@ function generalElementGrabber(elementID) {
 
 let userData = [];
 
-function toggleNavBar() {
-  const createButton = generalElementGrabber("create");
-  const subscriptionsButton = generalElementGrabber("subscriptions");
-  const settingsButton = generalElementGrabber("settings");
-
-  const currentActiveElement = document.activeElement.id;
-
-  if (currentActiveElement === "create") {
-    createButton.classList.appendChild("bg-blue-500");
-  } else if (currentActiveElement === "subscriptions") {
-    subscriptionsButton.classList.add("bg-blue-500");
-  } else if (currentActiveElement === "settings") {
-    settingsButton.classList.add("bg-blue-500");
-  }
-}
-
 function saveInfo() {
   let subscriptionData = {};
 
