@@ -5,12 +5,12 @@
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["content.js", "popup.js"]
+      "js": ["app/js/content.js", "app/js/popup.js"]
     }
   ],
   "browser_action": {
-    "default_icon": "images/demoIcon.png",
-    "default_popup": "popup.html",
+    "default_icon": "app/images/demoIcon.png",
+    "default_popup": "app/html/popup.html",
     "default_title": "A popup will come here"
   },
   "permissions": ["storage"]

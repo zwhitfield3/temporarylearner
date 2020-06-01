@@ -1,17 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   loadUserData();
-  const subscribeViaUserButton = document.getElementById(
-    "subscriptionType-byUser"
-  );
-  subscribeViaUserButton.addEventListener("change", changeHandler);
-
-  const submitButton = document.getElementById("submit");
-  submitButton.addEventListener("click", saveInfo);
+  userSelection();
+  submitInfo();
 });
-
-function generalElementGrabber(elementID) {
-  return document.getElementById(elementID);
-}
 
 let appData = {
   //app data
@@ -39,9 +30,25 @@ let appData = {
   },
 };
 
+function generalElementGrabber(elementID) {
+  return document.getElementById(elementID);
+}
+
 function loadUserData() {
   //blah blah blah
   console.log("user data loaded");
+}
+
+function userSelection() {
+  const subscribeViaUserButton = document.getElementById(
+    "subscriptionType-byUser"
+  );
+  subscribeViaUserButton.addEventListener("change", changeHandler);
+}
+
+function submitInfo() {
+  const submitButton = document.getElementById("submit");
+  submitButton.addEventListener("click", saveInfo);
 }
 
 function saveInfo() {
@@ -78,15 +85,6 @@ function saveInfo() {
   console.log("subscriptionData", appData);
 }
 
-function changeHandler(event) {
-  const listElement = document.getElementById("userSelection");
-  const eventWithTarget = event.target;
-  if (eventWithTarget.id === "subscriptionType-byUser") {
-    addOptionElement(eventWithTarget.id);
-    toggleHide(listElement.id, eventWithTarget.id);
-  }
-}
-
 function addOptionElement(elementID) {
   const elementToManipulate = document.getElementById(elementID);
   const listElement = document.getElementById("userSelection");
@@ -100,6 +98,15 @@ function addOptionElement(elementID) {
     listElement.appendChild(userOption);
   } else {
     listElement.removeChild(document.getElementById("1"));
+  }
+}
+
+function changeHandler(event) {
+  const listElement = document.getElementById("userSelection");
+  const eventWithTarget = event.target;
+  if (eventWithTarget.id === "subscriptionType-byUser") {
+    addOptionElement(eventWithTarget.id);
+    toggleHide(listElement.id, eventWithTarget.id);
   }
 }
 
