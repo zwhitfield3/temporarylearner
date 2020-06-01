@@ -1,3 +1,5 @@
+import * as data from "./data.js";
+
 document.addEventListener("DOMContentLoaded", function () {
   loadUserData();
 

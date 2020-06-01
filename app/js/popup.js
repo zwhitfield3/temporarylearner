@@ -1,3 +1,5 @@
+import * as data from "./data.js";
+
 document.addEventListener("DOMContentLoaded", function () {
   loadUserData();
   userSelection();
@@ -56,8 +58,8 @@ function saveInfo() {
   newSubscriptionData.subscriptionName = subscriptionName.value;
 
   // appData.userData.subscriptionData.push(newSubscriptionData);
-  createData("subscriptionData", newSubscriptionData);
-  console.log("subscriptionData", appData);
+  data.createData("subscriptionData", newSubscriptionData);
+  console.log("subscriptionData", data.appData);
 }
 
 function addOptionElement(elementID) {

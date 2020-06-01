@@ -1,4 +1,4 @@
-var appData = {
+export let appData = {
   //app data
   generalData: {
     appName: "",
@@ -24,22 +24,22 @@ var appData = {
   },
 };
 
-function createData(appDataLocation, passedData) {
+export function createData(appDataLocation, passedData) {
   //blah
 
-  for (key in appData.generalData) {
+  for (let key in appData.generalData) {
     if (key === appDataLocation) {
       appData.generalData[key] = passedData;
     }
   }
 
-  for (key in appData.userData) {
+  for (let key in appData.userData) {
     if (key === appDataLocation) {
       appData.userData[key].push(passedData);
     }
   }
 
-  for (key in appData.settings) {
+  for (let key in appData.settings) {
     if (key === appDataLocation) {
       appData.settings[key] = passedData;
     }
@@ -52,10 +52,10 @@ function createData(appDataLocation, passedData) {
   // }
 }
 
-function fetchData() {
+export function fetchData() {
   //blah
 }
 
-function deleteData() {
+export function deleteData() {
   //blah
 }
