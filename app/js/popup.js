@@ -57,7 +57,6 @@ function saveInfo() {
   const subscriptionName = generalElementGrabber("learningsName");
   newSubscriptionData.subscriptionName = subscriptionName.value;
 
-  // appData.userData.subscriptionData.push(newSubscriptionData);
   data.createData("subscriptionData", newSubscriptionData);
   console.log("subscriptionData", data.appData);
 }

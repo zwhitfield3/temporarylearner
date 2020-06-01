@@ -45,11 +45,7 @@ export function createData(appDataLocation, passedData) {
     }
   }
 
-  // if(appData.generalData.appName === appDataLocation) {
-  //   appData.generalData.appName = passedData
-  // } else if (appData.generalData.appName === appDataLocation) {
-
-  // }
+  //push to local storage
 }
 
 export function fetchData() {
