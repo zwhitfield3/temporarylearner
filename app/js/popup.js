@@ -4,32 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
   submitInfo();
 });
 
-let appData = {
-  //app data
-  generalData: {
-    appName: "",
-    timeUsedPast24Hr: "",
-    timeUsedTotal: "",
-    willAddMoreLata: "",
-  },
-  userData: {
-    subscriptionData: [
-      {
-        subscriberEmail: "",
-        subscriptionByThread: "",
-        subscriptionByUser: "",
-        subscriptionCadence: "",
-        subscriptionName: "",
-      },
-    ],
-    settings: {
-      darkMode: "",
-      allowFeedbackCollection: "false",
-      appColor: "",
-    },
-  },
-};
-
 function generalElementGrabber(elementID) {
   return document.getElementById(elementID);
 }
