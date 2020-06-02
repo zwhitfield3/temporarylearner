@@ -4,6 +4,7 @@ export let appData = {
     appName: "",
     timeUsedPast24Hr: "",
     timeUsedTotal: "",
+    hasOpenedAppOnce: "",
     willAddMoreLata: "",
   },
   userData: {
