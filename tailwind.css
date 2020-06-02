@@ -4,7 +4,12 @@
 
 @tailwind utilities;
 
-input[type="checkbox"] {
+input#darkMode {
+  position: relative;
+  left: 10;
+}
+
+input#allowFeedbackCollection {
   position: relative;
   left: 10;
 }
