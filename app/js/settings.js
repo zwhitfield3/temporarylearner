@@ -2,7 +2,7 @@ import * as data from "./data.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   loadUserData();
-  userSelection();
+  toggleHide();
 
   // submitInfo();
 });
@@ -19,11 +19,6 @@ function loadUserData() {
 function submitInfo() {
   const submitButton = document.getElementById("submit");
   submitButton.addEventListener("click", saveInfo);
-}
-
-function userSelection() {
-  const shareFeedbackButton = document.getElementById("shareFeedback");
-  shareFeedbackButton.addEventListener("click", toggleHide);
 }
 
 function saveInfo() {
