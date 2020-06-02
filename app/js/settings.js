@@ -3,6 +3,7 @@ import * as data from "./data.js";
 document.addEventListener("DOMContentLoaded", function () {
   loadUserData();
   toggleHide();
+  submitInfo();
 
   // submitInfo();
 });
@@ -17,42 +18,36 @@ function loadUserData() {
 }
 
 function submitInfo() {
-  const submitButton = document.getElementById("submit");
+  const submitButton = document.getElementById("submitFeedback");
   submitButton.addEventListener("click", saveInfo);
 }
 
 function saveInfo() {
   let newSubscriptionData = {};
-  console.log("newSubscriptionData", newSubscriptionData);
-  const subscriberEmail = generalElementGrabber("emailName");
-  newSubscriptionData.subscriberEmail = subscriberEmail.value;
+  // const subscriberEmail = generalElementGrabber("emailName");
+  // newSubscriptionData.subscriberEmail = subscriberEmail.value;
 
-  const subscriptionByThread = generalElementGrabber(
-    "subscriptionType-byThread"
-  );
-  newSubscriptionData.subscriptionByThread = subscriptionByThread.value;
+  // const subscriptionByUser = generalElementGrabber("userSelection");
+  // newSubscriptionData.subscriptionByUser = subscriptionByUser.value;
 
-  const subscriptionByUser = generalElementGrabber("userSelection");
-  newSubscriptionData.subscriptionByUser = subscriptionByUser.value;
+  // let subscriptionCadence = null;
+  // const newInfoAvailable = generalElementGrabber("newInfoAvailable");
+  // const onceAWeek = generalElementGrabber("onceAWeek");
 
-  let subscriptionCadence = null;
-  const newInfoAvailable = generalElementGrabber("newInfoAvailable");
-  const onceAWeek = generalElementGrabber("onceAWeek");
+  // if (newInfoAvailable.checked) {
+  //   subscriptionCadence = newInfoAvailable.value;
+  // }
+  // if (onceAWeek.checked) {
+  //   subscriptionCadence = onceAWeek.value;
+  // }
 
-  if (newInfoAvailable.checked) {
-    subscriptionCadence = newInfoAvailable.value;
-  }
-  if (onceAWeek.checked) {
-    subscriptionCadence = onceAWeek.value;
-  }
+  // newSubscriptionData.subscriptionCadence = subscriptionCadence;
 
-  newSubscriptionData.subscriptionCadence = subscriptionCadence;
-
-  const subscriptionName = generalElementGrabber("learningsName");
-  newSubscriptionData.subscriptionName = subscriptionName.value;
-
-  appData.userData.subscriptionData.push(newSubscriptionData);
-  console.log("subscriptionData", appData);
+  let feedback = {};
+  const feedbackByUser = generalElementGrabber("userFeedback");
+  feedback.feedbackByUser = feedbackByUser.value;
+  data.createData("userFeedback", feedback);
+  console.log("data", data.appData);
 }
 
 function toggleHide() {

@@ -22,7 +22,7 @@ export let appData = {
       allowFeedbackCollection: "false",
       userFeedback: [
         {
-          feedback: "",
+          feedbackByUser: "",
         },
       ],
     },
@@ -44,9 +44,14 @@ export function createData(appDataLocation, passedData) {
     }
   }
 
-  for (let key in appData.settings) {
+  //new logic
+  for (let key in appData.userData.settings) {
     if (key === appDataLocation) {
-      appData.settings[key] = passedData;
+      if (typeof appData.userData.settings[key] === "object") {
+        appData.userData.settings[key].push(passedData);
+      } else if (typeof appData.userData.settings[key] === "string") {
+        appData.userData.settings[key] = passedData;
+      }
     }
   }
 
