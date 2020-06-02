@@ -20,6 +20,11 @@ export let appData = {
     settings: {
       darkMode: "",
       allowFeedbackCollection: "false",
+      userFeedback: [
+        {
+          feedback: "",
+        },
+      ],
       appColor: "",
     },
   },
