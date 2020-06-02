@@ -25,7 +25,6 @@ export let appData = {
           feedback: "",
         },
       ],
-      appColor: "",
     },
   },
 };
