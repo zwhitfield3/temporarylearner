@@ -68,29 +68,32 @@
             <div class="flex flex-col">
               <div>
                 <button
+                  id="shareFeedback"
                   class="bg-blue-500 hover:bg-blue-700 text-white py-1 rounded text-xs py-1 px-2 w-36"
                 >
                   Share Feedback
                 </button>
               </div>
-            <div class="pt-2">
-              <textarea
-                name="userFeedback"
-                id="userFeedback"
-                cols="30"
-                rows="10"
-                placeholder="suggestions/comments here!"
-                class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              ></textarea>
-            </div>
-            <div class="pt-2">
-              <button
-                id="submitFeedback"
-                class="bg-blue-500 hover:bg-blue-700 text-white py-1 rounded text-xs py-1 px-2 w-56"
-              >
-                Submit
-              </button>
-            </div>
+              <div id="feedbackForum" hidden="true">
+                <div class="pt-2">
+                  <textarea
+                    name="userFeedback"
+                    id="userFeedback"
+                    cols="30"
+                    rows="10"
+                    placeholder="suggestions/comments here!"
+                    class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  ></textarea>
+                </div>
+                <div class="pt-2">
+                  <button
+                    id="submitFeedback"
+                    class="bg-blue-500 hover:bg-blue-700 text-white py-1 rounded text-xs py-1 px-2 w-56"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
           </div>
         </div>
       </div>
