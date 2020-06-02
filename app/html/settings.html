@@ -45,7 +45,28 @@
         <hr class="border-gray-600 -ml-2" />
         <div class="flex flex-col">
           <h1 class="text-lg pt-2 font-bold">Settings</h1>
-          SETTINGS HERE
+          <div class="pt-3">
+            <label class="text-sm pr-3">Dark Mode</label>
+            <label class="switch">
+              <input type="checkbox" name="darkMode" id="darkMode" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <div class="pt-3">
+            <label class="text-sm pr-3">Allow Feedback Collection</label>
+            <input
+              type="checkbox"
+              name="allowFeedbackCollection"
+              id="allowFeedbackCollection"
+            />
+          </div>
+          <div class="pt-3">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white py-1 rounded text-xs py-1 px-2 w-36"
+            >
+              Share Feedback
+            </button>
+          </div>
         </div>
       </div>
     </div>
