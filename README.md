@@ -1,3 +1,14 @@
+<h1>How to check extension out in development environment</h1>
+
+- clone the reop down
+- Go to [settings](chrome://settings/) in chrome
+- Click [extensions](chrome://extensions/)
+- Turn `Developer mode` on
+- Click `Load unpacked`
+- Select the directory that you cloned the repo down to
+- You'll see a new extension on your list of extensions on your browser bar
+- Click and check out the awesomeness!
+
 <h1>Initial notes </h1>
 
 Add custom classes to tailwind, update/add class to `tailwind.config.js`. Then run `npx tailwindcss build tailwind.css -o app/css/output.css`. Then reload chrome extension in the browser. And voila!
