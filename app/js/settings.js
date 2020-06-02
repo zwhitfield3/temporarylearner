@@ -3,7 +3,9 @@ import * as data from "./data.js";
 document.addEventListener("DOMContentLoaded", function () {
   loadUserData();
   toggleHide();
-  submitInfo();
+  submitFeedbackInfo();
+  saveDarkModeInfo();
+  // saveAllowFeedbackCollectionInfo();
 
   // submitInfo();
 });
@@ -17,32 +19,23 @@ function loadUserData() {
   console.log("user data loaded");
 }
 
-function submitInfo() {
+function submitFeedbackInfo() {
   const submitButton = document.getElementById("submitFeedback");
   submitButton.addEventListener("click", saveInfo);
 }
 
+function saveDarkModeInfo() {
+  const darkModeSliderElement = document.getElementById("darkMode");
+  darkModeSliderElement.addEventListener("click", () => {
+    let darkMode = null;
+    const darkModeSlider = generalElementGrabber("darkMode");
+    darkMode = darkModeSlider.value;
+    data.createData("darkMode", darkMode);
+    console.log("data", data.appData);
+  });
+}
+
 function saveInfo() {
-  let newSubscriptionData = {};
-  // const subscriberEmail = generalElementGrabber("emailName");
-  // newSubscriptionData.subscriberEmail = subscriberEmail.value;
-
-  // const subscriptionByUser = generalElementGrabber("userSelection");
-  // newSubscriptionData.subscriptionByUser = subscriptionByUser.value;
-
-  // let subscriptionCadence = null;
-  // const newInfoAvailable = generalElementGrabber("newInfoAvailable");
-  // const onceAWeek = generalElementGrabber("onceAWeek");
-
-  // if (newInfoAvailable.checked) {
-  //   subscriptionCadence = newInfoAvailable.value;
-  // }
-  // if (onceAWeek.checked) {
-  //   subscriptionCadence = onceAWeek.value;
-  // }
-
-  // newSubscriptionData.subscriptionCadence = subscriptionCadence;
-
   let feedback = {};
   const feedbackByUser = generalElementGrabber("userFeedback");
   feedback.feedbackByUser = feedbackByUser.value;
