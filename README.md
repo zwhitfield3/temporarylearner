@@ -38,3 +38,5 @@ Add custom classes to tailwind, update/add class to `tailwind.config.js`. Then r
 [] Run app on lambda or some way to keep app updates and persistence continuous --> keep listener active in the cloud (in case user closes browser)
 <br>
 [] Create an anonymous feedback form that also anonymizes the data
+<br>
+[] Have the update notifications be inside the app and have view functionality of viewing the subscription by clicking on `view` on subscription
