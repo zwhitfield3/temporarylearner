@@ -34,3 +34,7 @@ Add custom classes to tailwind, update/add class to `tailwind.config.js`. Then r
 [] Create algorithm for how the updates will be sent via email and or app notifications
 <br>
 [] Make sure all 3 pages can read and write data to local storage
+<br>
+[] Run app on lambda or some way to keep app updates and persistence continuous --> keep listener active in the cloud (in case user closes browser)
+<br>
+[] Create an anonymous feedback form that also anonymizes the data
