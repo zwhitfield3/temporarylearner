@@ -11,17 +11,17 @@
 
 <h1>Current Look & States</h1>
 
-![Image of create subscription page](/High Fidelity\ Designs/createSubscription.png)
+Image of create subscription page <img src="./High Fidelity Designs/createSubscription.png">
 
-![Image of create subscription page with users selected](/High\ Fidelity\ Designs/createSubscriptionWithUser.png)
+Image of create subscription page with users selected <img src="./High Fidelity Designs/createSubscriptionWithUser.png">
 
-![Image of subscription page](/High\ Fidelity\ Designs/subscription.png)
+Image of subscription page <img src="./High Fidelity Designs/subscription.png">
 
-![Image of subscription page with subscription options](/High\ Fidelity\ Designs/subscriptionWithOptions.png)
+Image of subscription page with subscription options <img src="./High Fidelity Designs/subscriptionWithOptions.png">
 
-![Image of settings page](/High\ Fidelity\ Designs/settingsPage.png)
+Image of settings page <img src="./High Fidelity Designs/settingsPage.png">
 
-![Image of settings page with dark mode and feedback](/High\ Fidelity\ Designs/settingsPagewithFeedback.png)
+Image of settings page with dark mode and feedback <img src="./High\ Fidelity\ Designs/settingsPagewithFeedback.png">
 
 <h1>Initial notes </h1>
 
