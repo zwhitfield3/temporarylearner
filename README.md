@@ -54,3 +54,5 @@ Add custom classes to tailwind, update/add class to `tailwind.config.js`. Then r
 [] Create an anonymous feedback form that also anonymizes the data
 <br>
 [] Have the update notifications be inside the app and have view functionality of viewing the subscription by clicking on `view` on subscription
+<br>
+[] Have subscription button color change when it has new update or new notification
