@@ -27,15 +27,55 @@ const buttons = {
 
 const buttonFunctions = {
   subscriptionDropdown() {
-    if (buttons.viewButton.hidden) {
+    if (buttons.viewButton.hidden && !buttons.yesButton.hidden) {
+      buttons.viewButton.hidden = true;
+      buttons.editButton.hidden = true;
+      buttons.removeButton.hidden = true;
+      generalElementGrabber("areYouSure").hidden = true;
+      buttons.noButton.hidden = true;
+      buttons.yesButton.hidden = true;
+    } else if (buttons.viewButton.hidden) {
       buttons.viewButton.hidden = false;
       buttons.editButton.hidden = false;
       buttons.removeButton.hidden = false;
+      generalElementGrabber("areYouSure").hidden = true;
+      buttons.noButton.hidden = true;
+      buttons.yesButton.hidden = true;
     } else {
       buttons.viewButton.hidden = true;
       buttons.editButton.hidden = true;
       buttons.removeButton.hidden = true;
     }
+  },
+
+  viewSubscription() {
+    //send url to content script
+  },
+
+  editSubscription() {
+    //more work here
+  },
+
+  removeSubscription() {
+    buttons.viewButton.hidden = true;
+    buttons.editButton.hidden = true;
+    buttons.removeButton.hidden = true;
+    generalElementGrabber("areYouSure").hidden = false;
+    buttons.noButton.hidden = false;
+    buttons.yesButton.hidden = false;
+  },
+
+  removeSubscriptionDeny() {
+    buttons.viewButton.hidden = false;
+    buttons.editButton.hidden = false;
+    buttons.removeButton.hidden = false;
+    generalElementGrabber("areYouSure").hidden = true;
+    buttons.noButton.hidden = true;
+    buttons.yesButton.hidden = true;
+  },
+
+  removeSubscriptionConfirm() {
+    //remove subscriptionModule from DOM and remove from data store on firebase
   },
 };
 
@@ -43,6 +83,27 @@ function buttonsToToggle() {
   buttons.subscription.addEventListener(
     "click",
     buttonFunctions.subscriptionDropdown
+  );
+
+  buttons.viewButton.addEventListener(
+    "click",
+    buttonFunctions.viewSubscription
+  );
+  buttons.editButton.addEventListener(
+    "click",
+    buttonFunctions.editSubscription
+  );
+  buttons.removeButton.addEventListener(
+    "click",
+    buttonFunctions.removeSubscription
+  );
+  buttons.noButton.addEventListener(
+    "click",
+    buttonFunctions.removeSubscriptionDeny
+  );
+  buttons.yesButton.addEventListener(
+    "click",
+    buttonFunctions.removeSubscriptionConfirm
   );
 }
 
