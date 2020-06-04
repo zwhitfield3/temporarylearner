@@ -21,13 +21,19 @@ const buttons = {
   viewButton: generalElementGrabber("view"),
   editButton: generalElementGrabber("edit"),
   removeButton: generalElementGrabber("remove"),
+  saveButton: generalElementGrabber("save"),
   noButton: generalElementGrabber("no"),
   yesButton: generalElementGrabber("yes"),
 };
 
 const buttonFunctions = {
   subscriptionDropdown() {
-    if (buttons.viewButton.hidden && !buttons.yesButton.hidden) {
+    if (buttons.viewButton.hidden && !buttons.saveButton.hidden) {
+      buttons.viewButton.hidden = true;
+      buttons.editButton.hidden = true;
+      buttons.removeButton.hidden = true;
+      buttons.saveButton.hidden = true;
+    } else if (buttons.viewButton.hidden && !buttons.yesButton.hidden) {
       buttons.viewButton.hidden = true;
       buttons.editButton.hidden = true;
       buttons.removeButton.hidden = true;
@@ -54,6 +60,16 @@ const buttonFunctions = {
 
   editSubscription() {
     //more work here
+    // debugger;
+    buttons.viewButton.hidden = true;
+    buttons.editButton.hidden = true;
+    buttons.removeButton.hidden = true;
+    buttons.saveButton.hidden = false;
+    buttons.subscription.input = buttons.subscription.innerText;
+  },
+
+  editSubscriptionSave() {
+    //save new name to firebase for this user
   },
 
   removeSubscription() {
