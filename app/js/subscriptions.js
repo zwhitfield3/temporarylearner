@@ -27,9 +27,15 @@ const buttons = {
 
 const buttonFunctions = {
   subscriptionDropdown() {
-    buttons.viewButton.classList.remove("hidden");
-    buttons.editButton.classList.remove("hidden");
-    buttons.removeButton.classList.remove("hidden");
+    if (buttons.viewButton.hidden) {
+      buttons.viewButton.hidden = false;
+      buttons.editButton.hidden = false;
+      buttons.removeButton.hidden = false;
+    } else {
+      buttons.viewButton.hidden = true;
+      buttons.editButton.hidden = true;
+      buttons.removeButton.hidden = true;
+    }
   },
 };
 
