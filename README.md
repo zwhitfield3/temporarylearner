@@ -11,7 +11,7 @@
 
 <h1>Current Look & States</h1>
 
-![Image of create subscription page](/High\ Fidelity\ Designs/createSubscription.png)
+![Image of create subscription page](/High Fidelity Designs/createSubscription.png)
 
 ![Image of create subscription page with users selected](/High\ Fidelity\ Designs/createSubscriptionWithUser.png)
 
