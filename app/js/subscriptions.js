@@ -22,6 +22,7 @@ const buttons = {
   editButton: generalElementGrabber("edit"),
   removeButton: generalElementGrabber("remove"),
   saveButton: generalElementGrabber("save"),
+  cancelButton: generalElementGrabber("cancel"),
   noButton: generalElementGrabber("no"),
   yesButton: generalElementGrabber("yes"),
 };
@@ -33,6 +34,7 @@ const buttonFunctions = {
       buttons.editButton.hidden = true;
       buttons.removeButton.hidden = true;
       buttons.saveButton.hidden = true;
+      buttons.cancelButton.hidden = true;
     } else if (buttons.viewButton.hidden && !buttons.yesButton.hidden) {
       buttons.viewButton.hidden = true;
       buttons.editButton.hidden = true;
@@ -65,11 +67,20 @@ const buttonFunctions = {
     buttons.editButton.hidden = true;
     buttons.removeButton.hidden = true;
     buttons.saveButton.hidden = false;
+    buttons.cancelButton.hidden = false;
     buttons.subscription.input = buttons.subscription.innerText;
   },
 
   editSubscriptionSave() {
     //save new name to firebase for this user
+  },
+
+  editSubscriptionCancel() {
+    buttons.viewButton.hidden = false;
+    buttons.editButton.hidden = false;
+    buttons.removeButton.hidden = false;
+    buttons.saveButton.hidden = true;
+    buttons.cancelButton.hidden = true;
   },
 
   removeSubscription() {
@@ -112,6 +123,10 @@ function buttonsToToggle() {
   buttons.removeButton.addEventListener(
     "click",
     buttonFunctions.removeSubscription
+  );
+  buttons.cancelButton.addEventListener(
+    "click",
+    buttonFunctions.editSubscriptionCancel
   );
   buttons.noButton.addEventListener(
     "click",
