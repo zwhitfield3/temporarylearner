@@ -2,6 +2,7 @@ import * as data from "./data.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   loadUserData();
+  buttonsToToggle();
 
   // submitInfo();
 });
@@ -13,6 +14,30 @@ function generalElementGrabber(elementID) {
 function loadUserData() {
   //blah blah blah
   console.log("user data loaded");
+}
+
+const buttons = {
+  subscription: generalElementGrabber("subscriptionButton"),
+  viewButton: generalElementGrabber("view"),
+  editButton: generalElementGrabber("edit"),
+  removeButton: generalElementGrabber("remove"),
+  noButton: generalElementGrabber("no"),
+  yesButton: generalElementGrabber("yes"),
+};
+
+const buttonFunctions = {
+  subscriptionDropdown() {
+    buttons.viewButton.classList.remove("hidden");
+    buttons.editButton.classList.remove("hidden");
+    buttons.removeButton.classList.remove("hidden");
+  },
+};
+
+function buttonsToToggle() {
+  buttons.subscription.addEventListener(
+    "click",
+    buttonFunctions.subscriptionDropdown
+  );
 }
 
 function submitInfo() {

@@ -47,9 +47,10 @@
           <h1 class="text-lg pt-2 font-bold pb-1">Subscriptions</h1>
           <hr class="border-gray-600" />
           <div id="subscriptionListContainer">
-            <div id="subscriptionModule" class="py-3 w-64">
+            <div id="subscriptionModule1" class="py-3 w-64">
               <button
                 class="bg-blue-500 hover:bg-blue-700 text-white rounded text-xs py-1 w-64"
+                id="subscriptionButton"
               >
                 Cooking with Morty
               </button>
@@ -57,25 +58,40 @@
                 id="subscriptionButtonsContainer"
                 class="flex pt-2 justify-center"
               >
-                <div>
+                <div id="view">
                   <button
-                    class="bg-blue-500 hover:bg-blue-700 text-white rounded text-xs px-2 py-1 w-16"
+                    class="bg-blue-500 hover:bg-blue-700 text-white rounded text-xs px-2 py-1 hidden w-16"
                   >
                     View
                   </button>
                 </div>
-                <div class="px-3">
+                <div class="px-3" id="edit">
                   <button
-                    class="bg-blue-500 hover:bg-blue-700 text-white rounded text-xs px-2 py-1 w-16"
+                    class="bg-blue-500 hover:bg-blue-700 text-white rounded text-xs px-2 py-1 hidden w-16"
                   >
                     Edit
                   </button>
                 </div>
-                <div>
+                <div id="remove">
                   <button
-                    class="bg-blue-500 hover:bg-blue-700 text-white rounded text-xs px-2 py-1 w-16"
+                    class="bg-blue-500 hover:bg-blue-700 text-white rounded text-xs px-2 py-1 hidden w-16"
                   >
                     Remove
+                  </button>
+                </div>
+                <label id="areYouSure" class="hidden">Are you sure?</label>
+                <div class="px-2" id="no">
+                  <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white rounded text-xs px-2 py-1 hidden w-16"
+                  >
+                    No
+                  </button>
+                </div>
+                <div id="yes">
+                  <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white rounded text-xs px-2 py-1 hidden w-16"
+                  >
+                    Yes
                   </button>
                 </div>
               </div>
